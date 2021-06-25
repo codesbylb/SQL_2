@@ -1,0 +1,6 @@
+1: SELECT Type, URL FROM Media INNER JOIN Movie_Media on Movie_Media.Media_id=Media.id WHERE Movie_id=1
+2: SELECT Type,URL,Review from Movie_Media INNER JOIN Review ON Movie_Media.Movie_id=Review.Movie_id INNER JOIN Media ON Media.id=Movie_Media.Media_id WHERE Review.Movie_id=1 
+3: SELECT First_Name,Last_Name,Type from Artist INNER JOIN Cast on Artist.id=Cast.Artist_id INNER JOIN Role ON Cast.Role_id=Role.id WHERE Movie_id=1
+4: SELECT Review FROM Review WHERE User_id=1
+5: SELECT Skill_Type FROM Skill WHERE id=(SELECT Skill_id FROM Artist_skill INNER JOIN Artist ON Artist_Skill.Artist_id=Artist.Id WHERE Artist.id=1)
+6: SELECT Type FROM Role INNER JOIN Cast ON Cast.Role_id=Role.id WHERE Cast.Artist_id=1
